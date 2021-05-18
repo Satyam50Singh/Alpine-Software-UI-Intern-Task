@@ -1,0 +1,65 @@
+<div class="row" style="width: 101%;">
+    <div class="col-12 col-md-3 side-div">
+        <img src="../../../assets/images/logo.png" alt="logo-image" class="logo-image" width="60px">
+        <h3 class="side-heading">QUIZEEE</h3>
+
+        <div class="inner-side-div">
+            <h5 class="inner-sub-heading">SUPER ADMIN</h5>
+            <hr>
+            <a href="#">USER MANAGEMENT</a>
+            <a href="#" class="select">QUIZ MASTER MANAGEMENT</a>
+            <a href="#">AD MANAGEMENT</a>
+            <a href="#">DISPUTE MANAGEMENT</a>
+            <a href="#">REQUESTS</a>
+            <a href="#">NOTIFICATIONS</a>
+        </div>
+
+    </div>
+    <div class="col-12 col-md-9" style="background-color: #f5f5f5;">
+
+        <nav style="margin-top: 12px;">
+            <h3 class="col-md-4 nav-heading mt-1">QUIZ MASTER MANAGEMENT</h3>
+            <div class="col-md-2 offset-md-6">
+                <div>
+                    <img src="../../../assets/images/bell-icon.png" alt="bell-icon" class="bell-icon-image" width="30px">
+                    <img src="../../../assets/images/profile-pic.png" class="profile-pic ml-auto" width="60px" alt="profile-pic">
+                </div>
+            </div>
+        </nav>
+        <br>
+
+        <div class="main-box">
+
+            <div class="row" style="width: 96%;">
+                <h4 class="col-md-4 heading-with-border">All Quiz Masters</h4>
+                <div class="col-md-2  offset-md-3">
+                    <h6 class="add-quiz-tag">Add Quiz Master</h6>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="search-tag">Search <mat-icon>search icon</mat-icon>
+                    </h6>
+                </div>
+            </div>
+
+            <div class="row" style="width: 96%; margin-bottom: 19px;">
+                <div class="col-12 col-md-4" *ngFor="let account of accounts">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src={{account.image}} alt="demo-image" class="img-fluid" width="76px">
+                            <mat-icon class="ml-auto" style="float: right; color: black;">more_vert</mat-icon>
+                            <h6 class="email-field">Email ID :{{account.email}}</h6>
+                            <div class="password-div">
+                                <h6>Password</h6>
+                                <h6 style="margin-top: 6px;">{{account.password}}</h6>
+                                <mat-icon>visibility icon</mat-icon>
+                            </div>
+                            <mat-icon class="delete-icon">delete icon</mat-icon>
+                            <mat-icon class="pencil-icon">create icon</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
